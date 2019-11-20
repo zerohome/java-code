@@ -1,0 +1,32 @@
+spring: 
+  profiles:
+    active: dev
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Macao
+  
+APP: 
+  NAME: NOE
+  DESC: ${APP.NAME} IS A GREAT APP.
+
+---
+spring: 
+  profiles: dev
+
+server: 
+  port: 8080
+
+---
+spring: 
+  profiles: test
+
+server: 
+  port: 8081
+
+---
+spring: 
+  profiles: prod
+
+server: 
+  port: 8082
